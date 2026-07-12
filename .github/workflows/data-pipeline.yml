@@ -2,8 +2,8 @@ name: Data Pipeline
 
 on:
   schedule:
-    # WGEA publishes annually (March); check weekly for an updated spreadsheet.
-    - cron: '23 18 * * 1'
+    # Cadence: yearly (WGEA publishes annually in March; run mid-April)
+    - cron: '23 18 15 4 *'
   workflow_dispatch:
   push:
     branches: [main]
