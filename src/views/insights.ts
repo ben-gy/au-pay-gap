@@ -8,6 +8,7 @@ import { buildInsights, scatterPoints } from '../analysis.ts';
 import { gapColor } from '../gpg.ts';
 import { metricProse } from '../types.ts';
 import { hoverTip, scaleLinear } from '../charts.ts';
+import { attachSvgZoom } from '../svgZoom.ts';
 import { viewHeader } from './industries.ts';
 
 export function renderInsights(host: HTMLElement, store: Store): void {
@@ -89,7 +90,10 @@ export function renderInsights(host: HTMLElement, store: Store): void {
   svg.append(yl);
 
   host.append(el('div', { class: 'chart-card' }, [svg as unknown as HTMLElement]));
+  // Scroll-wheel zoom + drag-pan so the ~8.5k-point cloud is legible. Deferred
+  // pointer capture (see svgZoom.ts) keeps the per-dot click/hover working.
+  attachSvgZoom(svg as unknown as SVGSVGElement);
   host.append(
-    el('p', { class: 'view-footnote', text: `${pts.length.toLocaleString('en-AU')} employers plotted (a few extreme outliers are clipped to keep the chart readable). Click any dot for that employer’s detail.` }),
+    el('p', { class: 'view-footnote', text: `${pts.length.toLocaleString('en-AU')} employers plotted (a few extreme outliers are clipped to keep the chart readable). Scroll to zoom, drag to pan, double-click to reset. Click any dot for that employer’s detail.` }),
   );
 }

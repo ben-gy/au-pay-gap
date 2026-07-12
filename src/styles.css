@@ -279,10 +279,25 @@ button { font-family: inherit; cursor: pointer; }
   box-shadow: var(--shadow-md); max-width: 260px;
 }
 .chart-card {
+  position: relative;
   background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
   padding: var(--sp-lg); box-shadow: var(--shadow-sm); overflow-x: auto;
 }
 .chart-card svg { width: 100%; height: auto; display: block; min-width: 560px; }
+.svg-zoom-controls {
+  position: absolute; top: var(--sp-md); right: var(--sp-md); z-index: 5;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.svg-zoom-controls button {
+  width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+  font-size: var(--fs-base); font-weight: 700; line-height: 1; cursor: pointer;
+  color: var(--text-secondary); background: var(--bg-surface);
+  border: 1px solid var(--border-default); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm); transition: color var(--t-fast), background var(--t-fast), border var(--t-fast);
+}
+.svg-zoom-controls button:hover {
+  color: var(--accent-primary); background: var(--accent-tint); border-color: var(--accent-primary);
+}
 .axis-text { font-size: 11px; fill: var(--text-tertiary); font-family: var(--font-mono); }
 .axis-title { font-size: 12px; fill: var(--text-secondary); font-weight: 600; }
 .dist-bar, .scatter-dot, .mx-filled { cursor: pointer; }
