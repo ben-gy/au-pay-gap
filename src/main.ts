@@ -213,7 +213,7 @@ function buildFooter(dataset: Dataset): HTMLElement {
   credit.append('Built by ');
   credit.append(el('a', { href: 'https://benrichardson.dev/', target: '_blank', rel: 'noopener', text: 'benrichardson.dev' }));
   credit.append(' · ');
-  credit.append(el('a', { href: 'https://hub.benrichardson.dev', target: '_blank', rel: 'noopener', text: 'more tools & sites' }));
+  credit.append(el('a', { href: 'https://sites.benrichardson.dev', target: '_blank', rel: 'noopener', text: 'more tools & sites' }));
   inner.append(credit);
 
   footer.append(inner);
