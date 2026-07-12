@@ -64,7 +64,7 @@ npm run preview
 
 ## How it works
 
-`pipeline/collect.mjs` downloads the official WGEA spreadsheet, parses it with SheetJS, and writes compact JSON (`public/data/{employers,groups,meta}.json`). A GitHub Action re-runs weekly and commits any changes, so the site refreshes automatically when WGEA publishes new figures. The frontend fetches that JSON once and renders every view client-side.
+`pipeline/collect.mjs` downloads the official WGEA spreadsheet, parses it with SheetJS, and writes compact JSON (`public/data/{employers,groups,meta}.json`). A GitHub Action re-runs yearly, after WGEA's annual publication, and commits any changes, so the site refreshes automatically when WGEA publishes new figures. The frontend fetches that JSON once and renders every view client-side.
 
 ## License
 
