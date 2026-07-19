@@ -1,6 +1,11 @@
 // Application entry point: load data, build the shell, wire the store to the
 // views, and render.
 
+// feedback:begin (managed by hub/scripts/feedback/backfill.mjs)
+import { mountFeedback } from './feedback';
+mountFeedback();
+// feedback:end
+
 import './styles.css';
 import { loadDataset } from './data.ts';
 import { Store, type ViewId } from './state.ts';
