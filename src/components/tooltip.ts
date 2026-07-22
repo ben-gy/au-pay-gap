@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Global glossary tooltip. A single fixed-position popover is shown when the
 // user clicks any element carrying a data-term attribute. Click away or Escape
 // to dismiss.

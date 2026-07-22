@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Data model. Records use compact keys to keep the JSON payload small; these
 // interfaces document what each key means. Values are decimals unless noted
 // (e.g. a GPG of 0.244 means 24.4%; positive = favours men, negative = women).

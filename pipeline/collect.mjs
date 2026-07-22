@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // WGEA Employer Gender Pay Gaps — data pipeline
 // Downloads the official WGEA employer gender pay gaps spreadsheet, parses it
 // with SheetJS, and emits compact JSON for the frontend to load.
